@@ -1,0 +1,45 @@
+@import '../../assets/style/variables.less';
+
+.layout{
+    background-color: @color-bg;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    .top-nav{
+        flex: none;
+        padding-left: 56px;
+        height: 48px;
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        font-size: 14px;
+        color: #666;
+        .nav-item{
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+            .name{
+                &.clickable{
+                    cursor: pointer;
+                    &:hover{
+                        color: @btn-normal;         
+                    }
+                }
+                &:last-child{
+                    color: #333;
+                    font-weight: bold;
+                }
+            }
+            .sep{
+                margin: 0 6px;
+                font-size: 18px;
+            }
+        }
+    }
+    .view-wrapper{
+        padding: 0 24px;
+        flex: 1;
+        overflow: auto;
+    }
+}

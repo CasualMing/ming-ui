@@ -1,0 +1,26 @@
+{
+    "name": "ming-ui",
+    "version": "1.0.0",
+    "description": "基于element-ui@2+ 二开的组件库",
+    "author": "CasualMing",
+    "main": "index.js",
+    "private": false,
+    "license": "ISC",
+    "publishConfig": {
+        "registry": "http://10.0.5.26:8081/repository/sinosun-front-npm-hosted"
+    },
+    "scripts": {
+        "link": "yalc publish && nodemon"
+    },
+    "dependencies": {
+        "axios": "^0.16.2",
+        "crypto-js": "^4.0.0",
+        "jszip": "^3.5.0",
+        "lodash.get": "^4.4.2",
+        "lodash.set": "^4.3.2",
+        "qs": "^6.9.4",
+        "sinosun-jwe": "0.0.2",
+        "xlsx": "^0.17.0"
+    },
+    "devDependencies": {}
+}

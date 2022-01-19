@@ -1,0 +1,84 @@
+.sndialog {
+	.el-dialog__header {
+		padding: 0;
+		background-color: transparent;
+	}
+
+	.el-dialog__body {
+        padding: 32px;
+	}
+
+	.common_dialog {
+		&_title {
+			position: relative;
+			height: 60px;
+			line-height: 60px;
+			font-size: 16px;
+            font-family: MicrosoftYaHei, MicrosoftYaHei-Bold;
+			font-weight: 700;
+			justify-content: flex-start;
+			align-items: center;
+			padding-left: 32px;
+            border-bottom: 1px solid #E9EDF5;
+		}
+
+		&_close {
+			position: absolute;
+			right: 14px;
+			top: 50%;
+			transform: translateY(-50%);
+			color: #97a0b0;
+			font-size: 20px;
+            cursor: pointer;
+		}
+
+		.el-dialog {
+			border-radius: 8px !important;
+			box-shadow: 0px 4px 16px 0px rgba(86, 92, 241, 0.16)!important;
+			position: absolute !important;
+			margin: auto !important;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%, -50%);
+			overflow-y: auto;
+			vertical-align: middle;
+			z-index: 56000;
+		}
+
+		.el-dialog__footer {
+			.el-button {
+				padding: 6px 21px;
+
+				&:active,
+				&:focus {
+					outline: none;
+					border: 0;
+				}
+
+				+.el-button {
+					margin-left: 16px;
+				}
+			}
+		}
+
+		&_follow {
+			&.common_dialog {
+				position: absolute;
+				overflow: hidden;
+			}
+
+			&::before {
+				content: "";
+				position: fixed;
+				width: 100vw;
+				height: 100vh;
+				top: 0;
+				right: 0;
+				bottom: 0;
+				left: 0;
+				overflow: auto;
+				margin: 0;
+			}
+		}
+	}
+}

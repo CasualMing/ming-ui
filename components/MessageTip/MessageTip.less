@@ -1,0 +1,74 @@
+@info-color: #565CF1;
+@success-color: #1CA485;
+@warning-color: #FF9F00;
+@error-color: #F04949;
+
+@info: {
+    background-color: #EBECFF;
+    border-color: @info-color;
+}
+
+@success: {
+    background-color: #EDFFFB;
+    border-color: @success-color;
+}
+
+@warning: {
+    background-color: #FFF8ED;
+    border-color: @warning-color;
+}
+
+@error: {
+    background-color: #FFF1F1;
+    border-color: @error-color;
+}
+
+.messageTip {
+    &.el-message {
+        background-color: transparent;
+        color: #323233;
+
+        .el-message__icon {
+            display: none
+        }
+
+        .el-message__closeBtn{
+            color: #97a0b0;
+        }
+
+        &--info {
+            @info();
+
+            .el-message__content {
+                color: #323233;
+            }
+        }
+
+        &--success {
+            @success();
+
+
+            .el-message__content {
+                color: @success-color;
+            }
+        }
+
+        &--warning {
+            @warning();
+
+
+            .el-message__content {
+                color: @warning-color;
+            }
+        }
+
+        &--error {
+            @error();
+
+
+            .el-message__content {
+                color: @error-color;
+            }
+        }
+    }
+}
