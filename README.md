@@ -1,7 +1,7 @@
 <!--
  * @Author: CasualMing
  * @Date: 2020-12-09 18:38:06
- * @LastEditTime: 2021-04-23 16:50:49
+ * @LastEditTime: 2022-01-19 17:29:25
  * @Description: 使用说明
 -->
 ## 项目结构
@@ -20,11 +20,11 @@
   + 修改全局npm配置
     - 方法一：输入命令
       ```
-      npm config set registry http://10.0.5.26:8081/repository/sinosun-front-npm-group/
+      npm config set registry '组件库源地址'
       ```
     - 方法二：修改配置文件，位置在C:\Users\用户名\\.npmrc
       ```
-      registry=http://10.0.5.26:8081/repository/sinosun-front-npm-group/
+      registry='组件库源地址'
       ```
   + 安装局部的第三方依赖
     ```
@@ -41,8 +41,8 @@
   + 在指定的前端项目中
     - 首先，在package.json文件的scripts中添加2个命令
        ```
-      "link-ui": "yalc add sinosun-operation-ui",
-      "unlink-ui": "yalc remove sinosun-operation-ui && npm i sinosun-operation-ui -S"
+      "link-ui": "yalc add ming-ui",
+      "unlink-ui": "yalc remove ming-ui && npm i ming-ui -S"
       ```
     - 然后，调试本地的包
       ```
@@ -53,28 +53,19 @@
       npm run unlink-ui
       ```  
 
-## 发布到私仓
-  + 修改全局npm配置，添加访问私仓的身份令牌，避免每次发布都要登录 （位置在C:\Users\用户名\\.npmrc）
-    ```
-    always-auth=true
-    _auth="c2lub3N1bi1mcm9udC1ucG0tdXNlcjpzaW5vc3VuLWZyb250="
-    ```
+## 发布到仓库中
   + 如果不是首次发布，需要修改组件包的版本号
     - 方法一：直接修改package.json中的version字段
     - 方法二：输入命令，小版本号自动加一
       ```
       npm version patch
       ```
-  + 将组件包发布到私仓
+  + 将组件包发布到仓库中
     ```
     npm publish
     ```
-  + 查看私仓中的组件包
-    - 地址：http://10.0.5.26:8081/#browse/browse:sinosun-front-npm-hosted
-    - 用户名：sinosun-front-npm-user
-    - 密码：sinosun-front
-  + 在指定的前端项目中，引入私仓中的组件包
+  + 在指定的前端项目中，引入组件包
     ```
-    npm install sinosun-operation-ui --save
+    npm install ming-ui --save
     ```
 
